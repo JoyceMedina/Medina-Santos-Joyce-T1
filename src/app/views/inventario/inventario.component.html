@@ -1,0 +1,26 @@
+<div class="container-fluid overflow-y-auto w-75" style="height: 68vh;">
+    <div class="w-100 bg-orange-custom p-3 rounded-3 shadow">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ubicación</th>
+                    <th>Capacidad</th>
+                    <th>Fecha</th>
+                    <th>Duración</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (evento of eventos; track $index) {
+                <tr>
+                    <td>{{evento.ubicacion}}</td>
+                    <td>{{evento.capacidad}}</td>
+                    <td>{{evento.fecha}}</td>
+                    <td>{{evento.duracion}}</td>
+                    <td>{{evento.tipo}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

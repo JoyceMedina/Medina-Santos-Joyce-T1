@@ -1,0 +1,88 @@
+<div class="container-fluid" style="height: 68vh;">
+    <div class="row row-cols-2 d-flex justify-content-center align-items-center mx-auto h-100 w-75">
+        <div class="col-4 p-1 mx-auto">
+            <div class="card shadow text-center overflow-hidden rounded-3">
+                <div
+                    class="header p-3 d-flex flex-column align-items-center justify-content-center bg-orange-custom mb-2">
+                    <div class="img-box">
+                        <i class="bi bi-calendar-heart-fill text-light"></i>
+                    </div>
+                    <span class="title text-light text-uppercase py-1 px-2">Eventos Medina</span>
+                </div>
+                <div class="content text-center">
+                    <h6>¡Que esperas¡ Registra tu evento y deja todo en nuestras manos.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-orange-custom p-4 rounded-3 shadow text-light">
+                <h3 class="font-modeska text-light text-uppercase">Eventos Medina</h3>
+                <hr class="my-3">
+                <form [formGroup]="form" (ngSubmit)="registrar()">
+                    <div class="row row-cols-2 mb-3">
+                        <div>
+                            <label class="form-label small fw-semibold">Ubicación</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">
+                                    <i class="bi bi-geo-fill text-orange-custom"></i>
+                                </span>
+                                <input type="text" class="form-control text-end" formControlName="ubicacion">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label small fw-semibold">Capacidad</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">
+                                    <i class="bi bi-person-lines-fill text-orange-custom"></i>
+                                </span>
+                                <input type="number" class="form-control text-end" formControlName="capacidad">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 mb-3">
+                        <div>
+                            <label class="form-label small fw-semibold">Fecha</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">
+                                    <i class="bi bi-calendar-event-fill text-orange-custom"></i>
+                                </span>
+                                <input type="date" class="form-control text-end" formControlName="fecha">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label small fw-semibold">Duración</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">
+                                    <i class="bi bi-alarm-fill text-orange-custom"></i>
+                                </span>
+                                <input type="time" class="form-control text-end" formControlName="duracion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 mb-2">
+                        <div>
+                            <label class="form-label small fw-semibold">Tipo</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">
+                                    <i class="bi bi-check-all text-orange-custom"></i>
+                                </span>
+                                <select class="form-control text-end" formControlName="tipo">
+                                    @for (tipo of tipos; track $index) {
+                                    <option [value]="tipo.id">{{tipo.tipo}}</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container-btn">
+                            <div class="input-group input-group-sm">
+                                <button type="submit" class=" btn btn-sm bg-dark border-light form-control">
+                                    <i class="bi bi-plus-circle-fill text-light"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

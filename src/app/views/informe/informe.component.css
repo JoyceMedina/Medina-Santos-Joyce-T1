@@ -1,0 +1,30 @@
+.card {
+    width: 190px;
+    height: 125px;
+    transition: all .5s;
+}
+
+.card:hover {
+    height: 250px;
+    background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
+}
+
+.card .header .img-box i {
+    font-size: 2rem;
+}
+
+.card .header .title {
+    font-size: 1em;
+    letter-spacing: .1em;
+    font-weight: 900;
+    transition: all .5s;
+}
+
+.card:hover .header {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.card .content {
+    display: block;
+    margin: .3rem 1rem;
+}

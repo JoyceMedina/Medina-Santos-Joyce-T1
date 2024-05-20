@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'modeska';
+    src: url('./assets/fonts/modeska.ttf');
+}
+
+.font-modeska {
+    font-family: 'modeska', sans-serif;
+}
+
+.bg-orange-custom {
+    background-color: #D95747;
+}
+
+.text-orange-custom {
+    color: #D95747;
+}
+
+.text-black-custom {
+    color: #333;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: whitesmoke transparent;
+}
